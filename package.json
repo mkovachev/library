@@ -8,7 +8,7 @@
     "devStart": "nodemon server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "MK",
   "license": "ISC",
   "dependencies": {
     "body-parser": "*",
@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "dotenv": "*",
-    "nodemon": "*"
+    "nodemon": "*",
+    "mongoose": "*"
   }
 }
