@@ -20,12 +20,12 @@ router.get('/', async (req, res) => {
   }
 })
 
-// New Author Route
-router.get('/new', (req, res) => {
-  res.render('authors/new', { author: new Author() })
+// display create author form
+router.get('/create', (req, res) => {
+  res.render('authors/create', { author: new Author() })
 })
 
-// Create Author Route
+// create author
 router.post('/', async (req, res) => {
   const author = new Author({
     name: req.body.name
@@ -34,7 +34,7 @@ router.post('/', async (req, res) => {
     const newAuthor = await author.save()
     res.redirect(`authors/${newAuthor.id}`)
   } catch {
-    res.render('authors/new', {
+    res.render('authors/create', {
       author: author,
       errorMessage: 'Error creating Author'
     })
